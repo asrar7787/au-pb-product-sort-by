@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category  PHP
+ * @package   Au\PbProductSortBy
+ * @author    Asrar Alam
+ * @license   OSL See COPYING.txt for license details.
+ *
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <virtualType name="Au\PbProductSortBy\Model\Catalog\Sorting\Date\QtySoldAsc" type="Au\PbProductSortBy\Model\Catalog\Sorting\SimpleQtySold">
+        <arguments>
+            <argument name="label" xsi:type="string">Bestsellers Ascending</argument>
+            <argument name="sortDirection" xsi:type="const">\Magento\Framework\DB\Select::SQL_ASC</argument>
+            <argument name="attributeField" xsi:type="string">entity_id</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="Au\PbProductSortBy\Model\Catalog\Sorting\Date\QtySoldDesc" type="Au\PbProductSortBy\Model\Catalog\Sorting\SimpleQtySold">
+        <arguments>
+            <argument name="label" xsi:type="string">Bestsellers Descending</argument>
+            <argument name="sortDirection" xsi:type="const">\Magento\Framework\DB\Select::SQL_DESC</argument>
+            <argument name="attributeField" xsi:type="string">entity_id</argument>
+        </arguments>
+    </virtualType>
+    <type name="Magento\PageBuilder\Model\Catalog\Sorting">
+        <arguments>
+            <argument name="sortClasses" xsi:type="array">
+                <item name="bestsellersasc" xsi:type="string">Au\PbProductSortBy\Model\Catalog\Sorting\Date\QtySoldAsc</item>
+                <item name="bestsellersdesc" xsi:type="string">Au\PbProductSortBy\Model\Catalog\Sorting\Date\QtySoldDesc</item>
+            </argument>
+        </arguments>
+    </type>
+</config>

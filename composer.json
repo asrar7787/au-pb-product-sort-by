@@ -1,0 +1,37 @@
+{
+    "name": "magento/au-pb-product-sortby",
+    "description": "AU Page Builder Product Sort By module adds option Bestsellers sort by",
+    "config": {
+        "sort-packages": true
+    },
+    "require": {
+        "php": "~7.1.3||~7.2.0||~7.3.0",
+        "magento/framework": "102.0.*",
+        "magento/module-page-builder": "*"
+    },
+    "suggest": {
+        "magento/module-sales-sample-data": "Sample Data version: 100.3.*"
+    },
+    "type": "magento2-module",
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "conflict": {
+        "gene/bluefoot": "*"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Au\\PbProductSortBy\\": ""
+        }
+    },
+    "version": "1.0.0",
+    "authors": [
+        {
+            "name": "Asrar Alam"
+        }
+    ]
+}
