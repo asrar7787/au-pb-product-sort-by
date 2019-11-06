@@ -1,5 +1,5 @@
 {
-    "name": "magento/au-pb-product-sortby",
+    "name": "au/pb-product-sortby",
     "description": "AU Page Builder Product Sort By module adds option Bestsellers sort by",
     "config": {
         "sort-packages": true
